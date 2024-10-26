@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Cards Landing Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+      <!-- Page Title -->
+      <h1 class="text-3xl font-bold text-center mb-8">Player Profiles</h1>
+
+      <!-- Player Cards Grid -->
+      <div id="playerContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Player Card -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img
+            class="w-full h-48 object-cover"
+            src="player-image.jpg"
+            alt="Player Image"
+          />
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Player Name</h2>
+            <p class="text-sm text-gray-600"><strong>Player ID:</strong> 001</p>
+            <p class="text-sm text-gray-600">
+              <strong>Name ID:</strong> John Doe
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Position ID:</strong> P001
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Country:</strong> Australia
+            </p>
+            <p class="text-sm text-gray-600"><strong>Role:</strong> Batsman</p>
+            <p class="text-sm text-gray-600">
+              <strong>Batting Type:</strong> Right-Handed
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Bowling Type:</strong> Right-Arm Fast
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Price:</strong> $1,000,000
+            </p>
+          </div>
+        </div>
+
+        <!-- Duplicate Player Card for other entries -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img
+            class="w-full h-48 object-cover"
+            src="player-image.jpg"
+            alt="Player Image"
+          />
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Player Name</h2>
+            <p class="text-sm text-gray-600"><strong>Player ID:</strong> 002</p>
+            <p class="text-sm text-gray-600">
+              <strong>Name ID:</strong> Jane Doe
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Position ID:</strong> P002
+            </p>
+            <p class="text-sm text-gray-600"><strong>Country:</strong> India</p>
+            <p class="text-sm text-gray-600"><strong>Role:</strong> Bowler</p>
+            <p class="text-sm text-gray-600">
+              <strong>Batting Type:</strong> Left-Handed
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Bowling Type:</strong> Left-Arm Spin
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Price:</strong> $800,000
+            </p>
+          </div>
+        </div>
+
+        <!-- Add as many player cards as needed -->
+      </div>
+    </div>
+    <script src="./displayPlayer.js"></script>
+  </body>
+</html>
