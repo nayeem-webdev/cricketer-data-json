@@ -2,7 +2,7 @@ console.log("connect");
 
 const Players = async () => {
   try {
-    const res = await fetch("/n.json");
+    const res = await fetch("https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/n.json");
     const data = await res.json();
     DisplayPlayers(data);
   } catch {

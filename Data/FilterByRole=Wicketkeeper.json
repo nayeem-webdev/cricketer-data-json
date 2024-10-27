@@ -1,0 +1,74 @@
+[
+  {
+    "playerId": "ind65ksld09",
+    "playerNameID": "rishabh_pant_ind",
+    "PlayerPositionId": "wk_batsman_ind_1",
+    "name": "Rishabh Pant",
+    "country": "India",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/rishabh_pant_ind.jpeg",
+    "role": "Wicketkeeper-batsman",
+    "battingType": "Left-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 1700000
+  },
+  {
+    "playerId": "sa93kljd2",
+    "playerNameID": "quinton_de_kock_sa",
+    "PlayerPositionId": "wk_batsman_sa_1",
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/quinton_de_kock_sa.jpeg",
+    "role": "Wicketkeeper-batsman",
+    "battingType": "Left-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 1600000
+  },
+  {
+    "playerId": "bdhsk754",
+    "playerNameID": "mushfiqur_rahim_bd",
+    "PlayerPositionId": "wk_batsman_bd_1",
+    "name": "Mushfiqur Rahim",
+    "country": "Bangladesh",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/mushfiqur_rahim_bd.jpeg",
+    "role": "Wicketkeeper-batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 900000
+  },
+  {
+    "playerId": "eng84sldkd",
+    "playerNameID": "jos_buttler_eng",
+    "PlayerPositionId": "wk_batsman_eng_1",
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/jos_buttler_eng.jpeg",
+    "role": "Wicketkeeper-batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 1800000
+  },
+  {
+    "playerId": "eng65lskd20",
+    "playerNameID": "jonny_bairstow_eng",
+    "PlayerPositionId": "wk_batsman_eng_2",
+    "name": "Jonny Bairstow",
+    "country": "England",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/jonny_bairstow_eng.jpeg",
+    "role": "Wicketkeeper-batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 1500000
+  },
+  {
+    "playerId": "zmp004",
+    "playerNameID": "richmond_mutumbami_zim",
+    "PlayerPositionId": "wicketkeeper_zim_4",
+    "name": "Richmond Mutumbami",
+    "country": "Zimbabwe",
+    "image": "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/assets/richmond_mutumbami_zim.jpeg",
+    "role": "Wicketkeeper",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 1800000
+  }
+]

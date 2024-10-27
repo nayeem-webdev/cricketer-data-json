@@ -8,74 +8,101 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      .loader {
+        width: fit-content;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 30px;
+        padding-bottom: 8px;
+        background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+        animation: l2 2s linear infinite;
+      }
+      .loader:before {
+        content: "Loading...";
+      }
+      @keyframes l2 {
+        to {
+          background-size: 100% 3px;
+        }
+      }
+    </style>
   </head>
   <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto p-6">
       <!-- Page Title -->
       <h1 class="text-3xl font-bold text-center mb-8">Player Profiles</h1>
 
-      <!-- Player Cards Grid -->
-      <div id="playerContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Player Card -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            class="w-full h-48 object-cover"
-            src="player-image.jpg"
-            alt="Player Image"
-          />
-          <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">Player Name</h2>
-            <p class="text-sm text-gray-600"><strong>Player ID:</strong> 001</p>
-            <p class="text-sm text-gray-600">
-              <strong>Name ID:</strong> John Doe
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Position ID:</strong> P001
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Country:</strong> Australia
-            </p>
-            <p class="text-sm text-gray-600"><strong>Role:</strong> Batsman</p>
-            <p class="text-sm text-gray-600">
-              <strong>Batting Type:</strong> Right-Handed
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Bowling Type:</strong> Right-Arm Fast
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Price:</strong> $1,000,000
-            </p>
-          </div>
+      <div>
+        <div class="flex flex-wrap gap-4 mb-6 items-center">
+          <span class="font-bold text-xl">Sort:</span>
+          <button
+            onclick="sortByCountry('asc')"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Sort by Country (Asc)
+          </button>
+          <button
+            onclick="sortByCountry('desc')"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Sort by Country (Desc)
+          </button>
+          <button
+            onclick="sortByName('asc')"
+            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+          >
+            Sort by Name (Asc)
+          </button>
+          <button
+            onclick="sortByName('desc')"
+            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+          >
+            Sort by Name (Desc)
+          </button>
         </div>
 
-        <!-- Duplicate Player Card for other entries -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            class="w-full h-48 object-cover"
-            src="player-image.jpg"
-            alt="Player Image"
-          />
-          <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">Player Name</h2>
-            <p class="text-sm text-gray-600"><strong>Player ID:</strong> 002</p>
-            <p class="text-sm text-gray-600">
-              <strong>Name ID:</strong> Jane Doe
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Position ID:</strong> P002
-            </p>
-            <p class="text-sm text-gray-600"><strong>Country:</strong> India</p>
-            <p class="text-sm text-gray-600"><strong>Role:</strong> Bowler</p>
-            <p class="text-sm text-gray-600">
-              <strong>Batting Type:</strong> Left-Handed
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Bowling Type:</strong> Left-Arm Spin
-            </p>
-            <p class="text-sm text-gray-600">
-              <strong>Price:</strong> $800,000
-            </p>
-          </div>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-4 mb-6">
+          <span class="font-bold text-xl">Filter:</span>
+          <button
+            onclick="filterByRole('All-Rounder')"
+            class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+          >
+            All-Rounder
+          </button>
+          <button
+            onclick="filterByRole('Wicket Keeper')"
+            class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+          >
+            Wicket Keeper
+          </button>
+          <button
+            onclick="filterByRole('Batsman')"
+            class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+          >
+            Batsman
+          </button>
+          <button
+            onclick="filterByRole('Bowler')"
+            class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+          >
+            Bowler
+          </button>
+        </div>
+      </div>
+
+      <!-- Player Cards Grid -->
+      <div
+        id="playerContainer"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Player Card -->
+
+        <div
+          class="h-96 border-2 w-full col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 flex justify-center items-center"
+        >
+          <div class="loader"></div>
         </div>
 
         <!-- Add as many player cards as needed -->
