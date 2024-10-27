@@ -1,8 +1,8 @@
-console.log("connect");
-
 const Players = async () => {
   try {
-    const res = await fetch("https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/n.json");
+    const res = await fetch(
+      "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/Data/SortByNameAsc.json"
+    );
     const data = await res.json();
     DisplayPlayers(data);
   } catch {
@@ -10,6 +10,17 @@ const Players = async () => {
   }
 };
 Players();
+
+const LoadDataSortFilter = async (url) => {
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    DisplayPlayers(data);
+  } catch {
+    console.log(error);
+  }
+};
+
 const DisplayPlayers = (players) => {
   const playerContainer = document.getElementById("playerContainer");
   playerContainer.innerHTML = "";
@@ -24,9 +35,7 @@ const DisplayPlayers = (players) => {
           />
           <div class="p-4">
           
-            <p class="text-lg font-bold mb-2">Player SL: ${
-              idx + 1
-            }</p>
+            <p class="text-lg font-bold mb-2">Player SL: ${idx + 1}</p>
             <h2 class="text-xl font-bold mb-2">${player.name}</h2>
             <p class="text-md text-gray-600"><strong>Player ID:</strong> ${
               player.playerId
