@@ -1,8 +1,6 @@
 const Players = async () => {
   try {
-    const res = await fetch(
-      "https://raw.githubusercontent.com/nayeem-webdev/cricketer-data-json/refs/heads/main/Data/SortByNameAsc.json"
-    );
+    const res = await fetch("Data/CricketersData.json");
     const data = await res.json();
     DisplayPlayers(data);
   } catch {
@@ -12,11 +10,12 @@ const Players = async () => {
 Players();
 
 const LoadDataSortFilter = async (url) => {
+  console.log("clicked");
   try {
     const res = await fetch(url);
     const data = await res.json();
     DisplayPlayers(data);
-  } catch {
+  } catch (error) {
     console.log(error);
   }
 };
